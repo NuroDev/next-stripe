@@ -11,7 +11,7 @@
 ## Getting Started
 
 ```
-yarn add next-stripe@beta
+yarn add @nurodev/next-stripe
 ```
 
 ### Add the API route
@@ -21,16 +21,16 @@ Create a `[...nextstripe].js` catch-all route in your project's `pages/api/strip
 > ⚠️ PLEASE NOTE: It is recommended you use a [restricted key](https://stripe.com/docs/keys#limit-access) with limited API access with this library. These keys can be created and configured with the required access in the Stripe Dashboard.
 
 ```js
-import NextStripe from 'next-stripe'
+import NextStripe from "@nurodev/next-stripe";
 
 export default NextStripe({
-  stripe_key: process.env.STRIPE_RESTRICTED_KEY
-})
+  stripe_key: process.env.STRIPE_RESTRICTED_KEY,
+});
 ```
 
 ## Usage
 
-`next-stripe/client` exports helper functions to call the Next.js API routes.
+`@nurodev/next-stripe/client` exports helper functions to call the Next.js API routes.
 
 ### Checkout Sessions
 
@@ -39,15 +39,15 @@ export default NextStripe({
 [Stripe API Docs](https://stripe.com/docs/api/checkout/sessions/create)
 
 ```js
-import { createCheckoutSession } from 'next-stripe/client'
+import { createCheckoutSession } from "@nurodev/next-stripe/client";
 
 const session = await createCheckoutSession({
   success_url: window.location.href,
   cancel_url: window.location.href,
-  line_items: [{ price: 'price_id', quantity: 1 }],
-  payment_method_types: ['card'],
-  mode: 'payment'
-})
+  line_items: [{ price: "price_id", quantity: 1 }],
+  payment_method_types: ["card"],
+  mode: "payment",
+});
 ```
 
 ### PaymentIntents
@@ -57,12 +57,12 @@ const session = await createCheckoutSession({
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/create)
 
 ```js
-import { createPaymentIntent } from 'next-stripe/client'
+import { createPaymentIntent } from "@nurodev/next-stripe/client";
 
 const paymentIntent = await createPaymentIntent({
   amount: 1000,
-  currency: 'usd'
-})
+  currency: "usd",
+});
 ```
 
 #### Confirm
@@ -70,11 +70,11 @@ const paymentIntent = await createPaymentIntent({
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/confirm)
 
 ```js
-import { confirmPaymentIntent } from 'next-stripe/client'
+import { confirmPaymentIntent } from "@nurodev/next-stripe/client";
 
-const paymentIntent = await confirmPaymentIntent('pi_id', {
-  payment_method: 'pm_id'
-})
+const paymentIntent = await confirmPaymentIntent("pi_id", {
+  payment_method: "pm_id",
+});
 ```
 
 #### Retrieve
@@ -82,9 +82,9 @@ const paymentIntent = await confirmPaymentIntent('pi_id', {
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/retrieve)
 
 ```js
-import { retrievePaymentIntent } from 'next-stripe/client'
+import { retrievePaymentIntent } from "@nurodev/next-stripe/client";
 
-const paymentIntent = await retrievePaymentIntent('pi_id')
+const paymentIntent = await retrievePaymentIntent("pi_id");
 ```
 
 #### Update
@@ -92,12 +92,12 @@ const paymentIntent = await retrievePaymentIntent('pi_id')
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/update)
 
 ```js
-import { updatePaymentIntent } from 'next-stripe/client'
+import { updatePaymentIntent } from "@nurodev/next-stripe/client";
 
-const paymentIntent = await updatePaymentIntent('pi_id', {
+const paymentIntent = await updatePaymentIntent("pi_id", {
   amount: 1000,
-  currency: 'usd'
-})
+  currency: "usd",
+});
 ```
 
 ### Billing Portal Sessions
@@ -107,12 +107,12 @@ const paymentIntent = await updatePaymentIntent('pi_id', {
 [Stripe API Docs](https://stripe.com/docs/api/customer_portal/create)
 
 ```js
-import { createBillingPortalSession } from 'next-stripe/client'
+import { createBillingPortalSession } from "@nurodev/next-stripe/client";
 
 const session = await createBillingPortalSession({
-  customer: 'cus_id',
-  return_url: window.location.href
-})
+  customer: "cus_id",
+  return_url: window.location.href,
+});
 ```
 
 ## Acknowledgements
