@@ -42,6 +42,10 @@ import NextStripe from "@nurodev/next-stripe";
 
 export default NextStripe({
   stripe_key: process.env.STRIPE_RESTRICTED_KEY,
+  options: {
+    // Optionally specifcy Stripe instance options
+    // See: https://stripe.com/docs/js/initializing#init_stripe_js-options
+  }
 });
 ```
 
