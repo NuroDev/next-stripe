@@ -27,13 +27,10 @@ export async function fetcher<
   })
 
   if (!response.ok) {
-    const error = new Error('An error occurred while performing this request.')
-
-    // TODO: Refactor passing response json / status to error
-    // error.info = await response.json();
-    // error.status = response.status;
-
-    throw error
+    const info = await response.json()
+    throw new Error(
+      `[${response.status}] An error occurred while performing this request: ${info}`
+    )
   }
 
   return response.json()
