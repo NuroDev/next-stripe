@@ -1,1 +1,1 @@
-export { confirmPaymentIntent } from "./payment-intent";
+export { confirmPaymentIntent } from './payment-intent'

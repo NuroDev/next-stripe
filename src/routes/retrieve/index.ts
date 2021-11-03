@@ -1,1 +1,1 @@
-export { retrievePaymentIntent } from "./payment-intent";
+export { retrievePaymentIntent } from './payment-intent'

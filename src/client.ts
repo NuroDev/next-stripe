@@ -1,12 +1,12 @@
-import { fetcher } from "./fetcher";
+import { fetcher } from './fetcher'
 
 import type {
   ConfirmPaymentIntentOptions,
   CreateBillingPortalSessionBody,
   CreateCheckoutSessionBody,
   CreatePaymentIntentBody,
-  UpdatePaymentIntentOptions,
-} from "./types";
+  UpdatePaymentIntentOptions
+} from './types'
 
 /**
  * Confirm a payment intent
@@ -19,9 +19,9 @@ import type {
 export async function confirmPaymentIntent(body: ConfirmPaymentIntentOptions) {
   return await fetcher({
     body,
-    method: "POST",
-    url: `/api/stripe/confirm/payment-intent`,
-  });
+    method: 'POST',
+    url: `/api/stripe/confirm/payment-intent`
+  })
 }
 
 /**
@@ -36,9 +36,9 @@ export async function createBillingPortalSession(
 ) {
   return await fetcher({
     body,
-    method: "POST",
-    url: `/api/stripe/create/billing-portal-session`,
-  });
+    method: 'POST',
+    url: `/api/stripe/create/billing-portal-session`
+  })
 }
 
 /**
@@ -51,9 +51,9 @@ export async function createBillingPortalSession(
 export async function createCheckoutSession(body: CreateCheckoutSessionBody) {
   return await fetcher({
     body,
-    method: "POST",
-    url: `/api/stripe/create/checkout-session`,
-  });
+    method: 'POST',
+    url: `/api/stripe/create/checkout-session`
+  })
 }
 
 /**
@@ -66,9 +66,9 @@ export async function createCheckoutSession(body: CreateCheckoutSessionBody) {
 export async function createPaymentIntent(body: CreatePaymentIntentBody) {
   return await fetcher({
     body,
-    method: "POST",
-    url: `/api/stripe/create/payment-intent`,
-  });
+    method: 'POST',
+    url: `/api/stripe/create/payment-intent`
+  })
 }
 
 /**
@@ -81,11 +81,11 @@ export async function createPaymentIntent(body: CreatePaymentIntentBody) {
 export async function retrievePaymentIntent(id: string) {
   return await fetcher({
     body: {
-      id,
+      id
     },
-    method: "GET",
-    url: `/api/stripe/retrieve/payment-intent`,
-  });
+    method: 'GET',
+    url: `/api/stripe/retrieve/payment-intent`
+  })
 }
 
 /**
@@ -99,7 +99,7 @@ export async function retrievePaymentIntent(id: string) {
 export async function updatePaymentIntent(body: UpdatePaymentIntentOptions) {
   return await fetcher({
     body,
-    method: "POST",
-    url: `/api/stripe/update/payment-intent`,
-  });
+    method: 'POST',
+    url: `/api/stripe/update/payment-intent`
+  })
 }

@@ -1,14 +1,14 @@
-import Stripe from "stripe";
+import Stripe from 'stripe'
 
 export interface ConfirmPaymentIntentOptions {
   /**
    * ID of the payment intent
    */
-  id: string;
+  id: string
   /**
    * Stripe payment intent parameters
    */
-  body: Partial<Stripe.PaymentIntentConfirmParams>;
+  body: Partial<Stripe.PaymentIntentConfirmParams>
 }
 
 export interface CreateBillingPortalSessionBody
@@ -24,11 +24,11 @@ export interface UpdatePaymentIntentOptions {
   /**
    * ID of the payment intent
    */
-  id: string;
+  id: string
   /**
    * Stripe payment intent parameters
    */
-  body: Partial<Stripe.PaymentIntentUpdateParams>;
+  body: Partial<Stripe.PaymentIntentUpdateParams>
 }
 
 export interface BaseRouteOptions {
@@ -37,9 +37,9 @@ export interface BaseRouteOptions {
    *
    * @see https://stripe.com/docs/keys
    */
-  stripe_key: string;
+  stripe_key: string
   /**
    *
    */
-  options?: Stripe.StripeConfig;
+  options?: Stripe.StripeConfig
 }
