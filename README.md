@@ -17,9 +17,9 @@
     <br />
   </sup>
   
-  [![Tests](https://img.shields.io/github/workflow/status/nurodev/next-stripe/CI?label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/nurodev/next-stripe)
-  [![Package Version](https://img.shields.io/npm/v/%2540nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
-  [![Package Monthly Downloads](https://img.shields.io/npm/dm/@nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
+  [![Tests](https://img.shields.io/github/workflow/status/next-stripe/CI?label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/ynnoj/next-stripe)
+  [![Package Version](https://img.shields.io/npm/v/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/next-stripe)
+  [![Package Monthly Downloads](https://img.shields.io/npm/dm/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/next-stripe)
   
 </div>
 
@@ -28,7 +28,7 @@
 ## Getting Started
 
 ```
-yarn add @nurodev/next-stripe
+yarn add next-stripe
 ```
 
 ### Add the API route
@@ -38,7 +38,7 @@ Create a `[...nextstripe].js` catch-all route in your project's `pages/api/strip
 > ⚠️ PLEASE NOTE: It is recommended you use a [restricted key](https://stripe.com/docs/keys#limit-access) with limited API access with this library. These keys can be created and configured with the required access in the Stripe Dashboard.
 
 ```js
-import NextStripe from "@nurodev/next-stripe";
+import NextStripe from "next-stripe";
 
 export default NextStripe({
   stripe_key: process.env.STRIPE_RESTRICTED_KEY,
@@ -51,7 +51,7 @@ export default NextStripe({
 
 ## Usage
 
-`@nurodev/next-stripe/client` exports helper functions to call the Next.js API routes.
+`next-stripe/client` exports helper functions to call the Next.js API routes.
 
 ### Checkout Sessions
 
@@ -60,7 +60,7 @@ export default NextStripe({
 [Stripe API Docs](https://stripe.com/docs/api/checkout/sessions/create)
 
 ```js
-import { createCheckoutSession } from "@nurodev/next-stripe/client";
+import { createCheckoutSession } from "next-stripe/client";
 
 const session = await createCheckoutSession({
   success_url: window.location.href,
@@ -78,7 +78,7 @@ const session = await createCheckoutSession({
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/create)
 
 ```js
-import { createPaymentIntent } from "@nurodev/next-stripe/client";
+import { createPaymentIntent } from "next-stripe/client";
 
 const paymentIntent = await createPaymentIntent({
   amount: 1000,
@@ -91,7 +91,7 @@ const paymentIntent = await createPaymentIntent({
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/confirm)
 
 ```js
-import { confirmPaymentIntent } from "@nurodev/next-stripe/client";
+import { confirmPaymentIntent } from "next-stripe/client";
 
 const paymentIntent = await confirmPaymentIntent("pi_id", {
   payment_method: "pm_id",
@@ -103,7 +103,7 @@ const paymentIntent = await confirmPaymentIntent("pi_id", {
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/retrieve)
 
 ```js
-import { retrievePaymentIntent } from "@nurodev/next-stripe/client";
+import { retrievePaymentIntent } from "next-stripe/client";
 
 const paymentIntent = await retrievePaymentIntent("pi_id");
 ```
@@ -113,7 +113,7 @@ const paymentIntent = await retrievePaymentIntent("pi_id");
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/update)
 
 ```js
-import { updatePaymentIntent } from "@nurodev/next-stripe/client";
+import { updatePaymentIntent } from "next-stripe/client";
 
 const paymentIntent = await updatePaymentIntent("pi_id", {
   amount: 1000,
@@ -128,7 +128,7 @@ const paymentIntent = await updatePaymentIntent("pi_id", {
 [Stripe API Docs](https://stripe.com/docs/api/customer_portal/create)
 
 ```js
-import { createBillingPortalSession } from "@nurodev/next-stripe/client";
+import { createBillingPortalSession } from "next-stripe/client";
 
 const session = await createBillingPortalSession({
   customer: "cus_id",
