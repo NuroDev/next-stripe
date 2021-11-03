@@ -23,8 +23,8 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
-    "./client": "./dist/client.js",
-    "./server": "./dist/server.js"
+    ".": "./dist/index.js",
+    "./client": "./dist/client.js"
   },
   "files": [
     "dist/**/*",
