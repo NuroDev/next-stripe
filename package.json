@@ -46,7 +46,7 @@
 		"build": "rimraf dist && tsup",
 		"build:prod": "cross-env NODE_ENV=production npm run build",
 		"dev": "npm run build -- --watch",
-		"test": "jest"
+		"test": "jest --passWithNoTests"
 	},
 	"dependencies": {
 		"stripe": "8.132.0"
