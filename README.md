@@ -18,7 +18,7 @@
   </sup>
   
   [![Tests](https://img.shields.io/github/workflow/status/nurodev/next-stripe/CI?label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/nurodev/next-stripe)
-  [![Package Version](https://img.shields.io/npm/v/@nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
+  [![Package Version](https://img.shields.io/npm/v/%2540nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
   [![Package Monthly Downloads](https://img.shields.io/npm/dm/@nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
   
 </div>
