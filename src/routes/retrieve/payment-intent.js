@@ -1,6 +1,11 @@
 import Stripe from 'stripe'
 
 export default async function retrievePaymentIntent(req, res, options) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+
   try {
     const stripe = new Stripe(options.stripe_key)
 
