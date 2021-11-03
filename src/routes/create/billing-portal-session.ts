@@ -1,5 +1,7 @@
 import Stripe from "stripe";
 
+import { defaultStripeOptions } from "../../constants";
+
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import type { BaseRouteOptions } from "../../types";
@@ -15,12 +17,7 @@ export async function createBillingPortalSession(
   }
 
   try {
-    const stripe = new Stripe(
-      stripe_key,
-      options ?? {
-        apiVersion: "2020-08-27",
-      }
-    );
+    const stripe = new Stripe(stripe_key, options ?? defaultStripeOptions);
 
     const session = await stripe.billingPortal.sessions.create(req.body);
 
