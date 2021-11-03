@@ -28,7 +28,7 @@
 ## Getting Started
 
 ```
-yarn add next-stripe
+yarn add next-stripe@beta
 ```
 
 ### Add the API route
@@ -45,7 +45,7 @@ export default NextStripe({
   options: {
     // Optionally specifcy Stripe instance options
     // See: https://stripe.com/docs/js/initializing#init_stripe_js-options
-  }
+  },
 });
 ```
 
