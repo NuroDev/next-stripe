@@ -1,1 +1,1 @@
-export { updatePaymentIntent } from './payment-intent'
+export { updatePaymentIntent } from './payment-intent';

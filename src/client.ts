@@ -1,12 +1,12 @@
-import { fetcher } from './fetcher'
+import { fetcher } from './fetcher';
 
 import type {
-  ConfirmPaymentIntentOptions,
-  CreateBillingPortalSessionBody,
-  CreateCheckoutSessionBody,
-  CreatePaymentIntentBody,
-  UpdatePaymentIntentOptions
-} from './types'
+	ConfirmPaymentIntentOptions,
+	CreateBillingPortalSessionBody,
+	CreateCheckoutSessionBody,
+	CreatePaymentIntentBody,
+	UpdatePaymentIntentOptions,
+} from './types';
 
 /**
  * Confirm a payment intent
@@ -17,11 +17,11 @@ import type {
  * @param {object} body - Stripe payment intent parameters
  */
 export async function confirmPaymentIntent(body: ConfirmPaymentIntentOptions) {
-  return await fetcher({
-    body,
-    method: 'POST',
-    url: `/api/stripe/confirm/payment-intent`
-  })
+	return await fetcher({
+		body,
+		method: 'POST',
+		url: `/api/stripe/confirm/payment-intent`,
+	});
 }
 
 /**
@@ -31,14 +31,12 @@ export async function confirmPaymentIntent(body: ConfirmPaymentIntentOptions) {
  *
  * @param {object} body - Stripe billing portal parameters
  */
-export async function createBillingPortalSession(
-  body: CreateBillingPortalSessionBody
-) {
-  return await fetcher({
-    body,
-    method: 'POST',
-    url: `/api/stripe/create/billing-portal-session`
-  })
+export async function createBillingPortalSession(body: CreateBillingPortalSessionBody) {
+	return await fetcher({
+		body,
+		method: 'POST',
+		url: `/api/stripe/create/billing-portal-session`,
+	});
 }
 
 /**
@@ -49,11 +47,11 @@ export async function createBillingPortalSession(
  * @param {object} body - Stripe checkout session parameters
  */
 export async function createCheckoutSession(body: CreateCheckoutSessionBody) {
-  return await fetcher({
-    body,
-    method: 'POST',
-    url: `/api/stripe/create/checkout-session`
-  })
+	return await fetcher({
+		body,
+		method: 'POST',
+		url: `/api/stripe/create/checkout-session`,
+	});
 }
 
 /**
@@ -64,11 +62,11 @@ export async function createCheckoutSession(body: CreateCheckoutSessionBody) {
  * @param {object} body - Stripe payment intent parameters
  */
 export async function createPaymentIntent(body: CreatePaymentIntentBody) {
-  return await fetcher({
-    body,
-    method: 'POST',
-    url: `/api/stripe/create/payment-intent`
-  })
+	return await fetcher({
+		body,
+		method: 'POST',
+		url: `/api/stripe/create/payment-intent`,
+	});
 }
 
 /**
@@ -79,13 +77,13 @@ export async function createPaymentIntent(body: CreatePaymentIntentBody) {
  * @param {string} id - ID of the payment intent
  */
 export async function retrievePaymentIntent(id: string) {
-  return await fetcher({
-    body: {
-      id
-    },
-    method: 'GET',
-    url: `/api/stripe/retrieve/payment-intent`
-  })
+	return await fetcher({
+		body: {
+			id,
+		},
+		method: 'GET',
+		url: `/api/stripe/retrieve/payment-intent`,
+	});
 }
 
 /**
@@ -97,9 +95,9 @@ export async function retrievePaymentIntent(id: string) {
  * @param {object} body - Stripe payment intent parameters
  */
 export async function updatePaymentIntent(body: UpdatePaymentIntentOptions) {
-  return await fetcher({
-    body,
-    method: 'POST',
-    url: `/api/stripe/update/payment-intent`
-  })
+	return await fetcher({
+		body,
+		method: 'POST',
+		url: `/api/stripe/update/payment-intent`,
+	});
 }

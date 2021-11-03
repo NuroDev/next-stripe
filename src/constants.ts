@@ -1,5 +1,5 @@
-import Stripe from 'stripe'
+import Stripe from 'stripe';
 
 export const defaultStripeOptions: Stripe.StripeConfig = {
-  apiVersion: '2020-08-27'
-}
+	apiVersion: '2020-08-27',
+};
