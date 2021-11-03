@@ -1,17 +1,17 @@
 {
-  "name": "@nurodev/next-stripe",
-  "version": "0.1.1",
+  "name": "next-stripe",
+  "version": "0.0.0-semantically-released",
   "description": "Simplified server-side Stripe workflows in Next.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nurodev/next-stripe.git"
+    "url": "https://github.com/ynnoj/next-stripe.git"
   },
-  "homepage": "https://github.com/nurodev/next-stripe",
-  "bugs": "https://github.com/nurodev/next-stripe/issues",
+  "homepage": "https://github.com/ynnoj/next-stripe",
+  "bugs": "https://github.com/ynnoj/next-stripe/issues",
   "author": {
-    "name": "nurodev",
-    "email": "me@nuro.dev",
-    "url": "https://nuro.dev"
+    "name": "Jonathan Steele",
+    "email": "jonathan@steele.pro",
+    "url": "https://steele.pro"
   },
   "keywords": [
     "next",
