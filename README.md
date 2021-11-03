@@ -1,10 +1,27 @@
-<h2 align="center">
-  NextStripe
-</h3>
-
-<p align="center">
-  Simplified server-side Stripe workflows in Next.js
-</p>
+<div align="center">
+  <h1>
+    <br/>
+    <br/>
+    💰
+    <br />
+    NextStripe
+    <br />
+    <br />
+    <br />
+    <br />
+  </h1>
+  <sup>
+    <br />
+    Simplified server-side Stripe workflows in Next.js</em>
+    <br />
+    <br />
+  </sup>
+  
+  [![Tests](https://img.shields.io/github/workflow/status/nurodev/next-stripe/CI?label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/nurodev/next-stripe)
+  [![Package Version](https://img.shields.io/npm/v/@nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
+  [![Package Monthly Downloads](https://img.shields.io/npm/dm/@nurodev/next-stripe?label=%20&style=for-the-badge)](https://www.npmjs.com/package/@nurodev/next-stripe)
+  
+</div>
 
 > ⚠️ PLEASE NOTE: This library is currently in beta and should be used in production with caution!
 
