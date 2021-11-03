@@ -37,7 +37,7 @@ Create a `[...nextstripe].js` catch-all route in your project's `pages/api/strip
 
 > ⚠️ PLEASE NOTE: It is recommended you use a [restricted key](https://stripe.com/docs/keys#limit-access) with limited API access with this library. These keys can be created and configured with the required access in the Stripe Dashboard.
 
-```js
+```ts
 import NextStripe from '@nurodev/next-stripe';
 
 export default NextStripe({
@@ -59,7 +59,7 @@ export default NextStripe({
 
 [Docs](https://stripe.com/docs/api/checkout/sessions/create)
 
-```js
+```ts
 import { createCheckoutSession } from '@nurodev/next-stripe/client';
 
 const session = await createCheckoutSession({
@@ -77,7 +77,7 @@ const session = await createCheckoutSession({
 
 [Docs](https://stripe.com/docs/api/payment_intents/create)
 
-```js
+```ts
 import { createPaymentIntent } from '@nurodev/next-stripe/client';
 
 const paymentIntent = await createPaymentIntent({
@@ -90,7 +90,7 @@ const paymentIntent = await createPaymentIntent({
 
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/confirm)
 
-```js
+```ts
 import { confirmPaymentIntent } from '@nurodev/next-stripe/client';
 
 const paymentIntent = await confirmPaymentIntent('pi_id', {
@@ -102,7 +102,7 @@ const paymentIntent = await confirmPaymentIntent('pi_id', {
 
 [Docs](https://stripe.com/docs/api/payment_intents/retrieve)
 
-```js
+```ts
 import { retrievePaymentIntent } from '@nurodev/next-stripe/client';
 
 const paymentIntent = await retrievePaymentIntent('pi_id');
@@ -112,7 +112,7 @@ const paymentIntent = await retrievePaymentIntent('pi_id');
 
 [Docs](https://stripe.com/docs/api/payment_intents/update)
 
-```js
+```ts
 import { updatePaymentIntent } from '@nurodev/next-stripe/client';
 
 const paymentIntent = await updatePaymentIntent('pi_id', {
@@ -127,7 +127,7 @@ const paymentIntent = await updatePaymentIntent('pi_id', {
 
 [Docs](https://stripe.com/docs/api/customer_portal/create)
 
-```js
+```ts
 import { createBillingPortalSession } from '@nurodev/next-stripe/client';
 
 const session = await createBillingPortalSession({
